@@ -4,22 +4,22 @@
 
 `CURSO: Sistemas de Informação`
 
-`DISCIPLINA: Projeto - Projeto de Infraestrutura`
+`DISCIPLINA: Programação Orientada por Objetos`
 
-`Eixo: 5`
 
-Descrever resumidamente, em um ou dois parágrafos, o projeto que está sendo desenvolvido.
+
+O projeto Desenvolvido sera um programa para emissao de conta de luz 
 
 ## Integrantes
 
-* Nome completo do aluno 1
-* Nome completo do aluno 2
-* Nome completo do aluno 3
-* Nome completo do aluno 4
-* Nome completo do aluno 5
+* Ana Flavia de Oliveira Costa
+* Derick Lucas Alves Rodrigues
+* Matheus Antônio Valentin Freitas
+* Sabrina Luiza Mendes da Silva
+* Vinicius Celio Fontes Ribeiro
 
 ## Orientador
 
-* Nome completo do professor 1
+*  Fabio Leandro Rodrigues Cordeiro
 
 

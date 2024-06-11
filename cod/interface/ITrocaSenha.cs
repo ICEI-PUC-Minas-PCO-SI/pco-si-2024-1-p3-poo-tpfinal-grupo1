@@ -1,0 +1,4 @@
+interface ITrocaSenha
+{
+    void trocarSenha();
+}

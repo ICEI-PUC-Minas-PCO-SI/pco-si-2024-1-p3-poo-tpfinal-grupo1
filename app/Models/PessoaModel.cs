@@ -8,7 +8,7 @@ namespace app.Models
 {
     internal abstract class PessoaModel
     {
-        public int Id { get; }
+        public int Id { get; set; }
         public string? Email { get; set; }
         public string? Telefone { get; set; }
         public PessoaEnderecoModel? Endereco { get; set; }

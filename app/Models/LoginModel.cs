@@ -8,5 +8,7 @@ namespace app.Models
 {
     internal class LoginModel
     {
+        public int Id { get; set; }
+        public string? Senha { get; set; }
     }
 }

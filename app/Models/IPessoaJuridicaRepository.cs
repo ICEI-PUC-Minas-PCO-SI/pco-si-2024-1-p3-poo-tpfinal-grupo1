@@ -12,6 +12,6 @@ namespace app.Models
         void Editar(PessoaJuridicaModel pessoaJuridica);
         void Deletar(int Id);
         List<PessoaJuridicaModel> ObterTodos();
-        List<PessoaJuridicaModel> Obter();
+        List<PessoaJuridicaModel> Obter(string value);
     }
 }

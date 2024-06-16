@@ -8,5 +8,10 @@ namespace app.Models
 {
     internal interface IPessoaEnderecoRepository
     {
+        void Adicionar(PessoaEnderecoModel pessoaEndereco);
+        void Editar(PessoaEnderecoModel pessoaEndereco);
+        void Deletar(int Id);
+        List<PessoaEnderecoModel> ObterTodos();
+        List<PessoaEnderecoModel> Obter(string value);
     }
 }

@@ -21,6 +21,5 @@ namespace app.Models
         [StringLength(11, MinimumLength = 10, ErrorMessage =
             "Telefone não está correto")]
         public string? Telefone { get; set; }
-        public PessoaEnderecoModel? Endereco { get; set; }
     }
 }

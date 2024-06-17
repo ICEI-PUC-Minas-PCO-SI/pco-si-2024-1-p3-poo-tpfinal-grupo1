@@ -13,6 +13,9 @@ namespace app.Repositories
     {
         public void Adicionar(PessoaFisicaModel pessoaFisica)
         {
+
+            var test = Obter(pessoaFisica.CPF);
+            if (test.CPF == pessoaFisica.CPF) { return; }
             using (var connection = new SqlConnection(connectionString))
             {
                 var insertSql = @"INSERT INTO
@@ -74,8 +77,8 @@ namespace app.Repositories
                                     FROM 
                                         Pessoa
                                     INNER JOIN PessoaFisica ON Pessoa.Id = PessoaFisica.IdPessoa
-                                    where CPF = '@value' or Nome = '@value';";
-                var pessoaFisica = connection.QueryFirst<PessoaFisicaModel>(selectQuery, new { value });
+                                    where CPF = @value or Nome = @value;";
+                var pessoaFisica = connection.QueryFirstOrDefault<PessoaFisicaModel>(selectQuery, new { value });
                 return pessoaFisica;
             }
         }

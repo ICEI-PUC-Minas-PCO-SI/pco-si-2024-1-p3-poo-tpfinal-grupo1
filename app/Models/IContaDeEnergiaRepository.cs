@@ -11,7 +11,6 @@ namespace app.Models
         void Adicionar(ContaDeEnergiaModel contaDeEnergia);
         void Editar (ContaDeEnergiaModel contaDeEnergia);
         void Deletar(int Id);
-        List<ContaDeEnergiaModel> ObterTodos();
         List<ContaDeEnergiaModel> Obter(string value);
     }
 }

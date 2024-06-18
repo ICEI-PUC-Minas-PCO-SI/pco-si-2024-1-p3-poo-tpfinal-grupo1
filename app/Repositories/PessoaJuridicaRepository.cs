@@ -1,17 +1,17 @@
 ﻿using app.Models;
+using Dapper;
+using Microsoft.Data.SqlClient;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Microsoft.Data.SqlClient;
-using Dapper;
 
 namespace app.Repositories
 {
-    internal class PessoaFisicaRepository : BaseRepository, IPessoaFisicaRepository
+    internal class PessoaJuridicaRepository : BaseRepository, IPessoaJuridicaRepository
     {
-        public void Adicionar(PessoaFisicaModel pessoaFisica)
+        public void Adicionar(PessoaJuridicaModel pessoaJuridica)
         {
             using (var connection = new SqlConnection(connectionString))
             {
@@ -20,23 +20,23 @@ namespace app.Repositories
                                  OUTPUT INSERTED.Id
                                  VALUES(@Email, @Telefone);";
 
-                var id = connection.ExecuteScalar<int> (insertSql, new
+                var id = connection.ExecuteScalar<int>(insertSql, new
                 {
-                    pessoaFisica.Email,
-                    pessoaFisica.Telefone
+                    pessoaJuridica.Email,
+                    pessoaJuridica.Telefone
                 });
 
-                pessoaFisica.Id = id;
+                pessoaJuridica.Id = id;
 
                 insertSql = @"INSERT INTO
-                                PessoaFisica
-                            VALUES(@CPF, @Id, @Nome)";
+                                PessoaJuridica
+                            VALUES(@CNPJ, @Id, @RazaoSocial)";
 
                 connection.Execute(insertSql, new
                 {
-                    pessoaFisica.CPF,
-                    pessoaFisica.Id,
-                    pessoaFisica.Nome
+                    pessoaJuridica.CNPJ,
+                    pessoaJuridica.Id,
+                    pessoaJuridica.RazaoSocial
                 });
             }
         }
@@ -46,7 +46,7 @@ namespace app.Repositories
             using (var connection = new SqlConnection(connectionString))
             {
                 var deleteSql = @"DELETE FROM
-                                    PessoaFisica
+                                    PessoaJuridica
                                  WHERE IdPessoa = @Id;
 
                                  DELETE FROM
@@ -56,46 +56,47 @@ namespace app.Repositories
                 connection.Execute(deleteSql, new { Id });
             }
         }
-        public void Editar(PessoaFisicaModel pessoaFisica)
+
+        public void Editar(PessoaJuridicaModel pessoaJuridica)
         {
             throw new NotImplementedException();
         }
 
-        public List<PessoaFisicaModel> Obter(string value)
+        public List<PessoaJuridicaModel> Obter(string value)
         {
-            using (var connection = new SqlConnection (connectionString))
+            using (var connection = new SqlConnection(connectionString))
             {
                 var selectQuery = @"SELECT 
-                                        PessoaFisica.Nome as Nome,
+                                        PessoaJuridica.RazaoSocial as RazaoSocial,
                                         Pessoa.Email as Email,
-                                        PessoaFisica.CPF as CPF,
+                                        PessoaJuridica.CNPJ as CNPJ,
                                         Pessoa.Telefone as Telefone,
                                         Pessoa.Id as Id
                                     FROM 
                                         Pessoa
-                                    INNER JOIN PessoaFisica ON Pessoa.Id = PessoaFisica.IdPessoa
+                                    INNER JOIN PessoaJuridica ON Pessoa.Id = PessoaJuridica.IdPessoa
                                     where CPF = @value or Nome = @value;";
-                var pessoaFisica = connection.Query<PessoaFisicaModel>(selectQuery, new { value });
-                return pessoaFisica.ToList();
+                var pessoaJuridica = connection.Query<PessoaJuridicaModel>(selectQuery, new { value });
+                return pessoaJuridica.ToList();
             }
         }
 
-        public List<PessoaFisicaModel> ObterTodos()
+        public List<PessoaJuridicaModel> ObterTodos()
         {
             using (var connection = new SqlConnection(connectionString))
             {
-                var pessoasFisicas = connection.Query<PessoaFisicaModel>(
+                var pessoasJuridicas = connection.Query<PessoaJuridicaModel>(
                             @"SELECT 
-                                PessoaFisica.Nome as Nome,
+                                PessoaJuridica.RazaoSocial as RazaoSocial,
                                 Pessoa.Email as Email,
-                                PessoaFisica.CPF as CPF,
+                                PessoaJuridica.CNPJ as CNPJ,
                                 Pessoa.Telefone as Telefone,
                                 Pessoa.Id as Id
                             FROM 
                                 Pessoa
-                            INNER JOIN PessoaFisica ON Pessoa.Id = PessoaFisica.IdPessoa"
+                            INNER JOIN PessoaJuridica ON Pessoa.Id = PessoaJuridica.IdPessoa"
                  );
-                return pessoasFisicas.ToList();
+                return pessoasJuridicas.ToList();
             }
         }
     }

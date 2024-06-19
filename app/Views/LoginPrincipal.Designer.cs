@@ -1,6 +1,6 @@
 ﻿namespace app.Views
 {
-    partial class Login
+    partial class LoginPrincipal
     {
         /// <summary>
         /// Required designer variable.
@@ -31,14 +31,11 @@
             label2 = new Label();
             groupBox1 = new GroupBox();
             btnEntrarLogin = new Button();
-            textBox2 = new TextBox();
-            textBox1 = new TextBox();
-            label4 = new Label();
-            label3 = new Label();
+            documentoTxBox = new TextBox();
+            documentoLabel = new Label();
             label1 = new Label();
             optionsLogin = new ComboBox();
-            label5 = new Label();
-            btnCadastrarLogin = new LinkLabel();
+            btnAbirLoginSecundario = new LinkLabel();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,59 +52,41 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(btnEntrarLogin);
-            groupBox1.Controls.Add(textBox2);
-            groupBox1.Controls.Add(textBox1);
-            groupBox1.Controls.Add(label4);
-            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(documentoTxBox);
+            groupBox1.Controls.Add(documentoLabel);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(optionsLogin);
             groupBox1.Location = new Point(234, 118);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(226, 235);
+            groupBox1.Size = new Size(226, 201);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
             // btnEntrarLogin
             // 
-            btnEntrarLogin.Location = new Point(25, 194);
+            btnEntrarLogin.Location = new Point(26, 148);
             btnEntrarLogin.Name = "btnEntrarLogin";
             btnEntrarLogin.Size = new Size(165, 23);
             btnEntrarLogin.TabIndex = 6;
             btnEntrarLogin.Text = "ENTRAR";
             btnEntrarLogin.UseVisualStyleBackColor = true;
             // 
-            // textBox2
+            // documentoTxBox
             // 
-            textBox2.Location = new Point(26, 155);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(165, 23);
-            textBox2.TabIndex = 5;
-            textBox2.UseSystemPasswordChar = true;
+            documentoTxBox.Location = new Point(26, 102);
+            documentoTxBox.Name = "documentoTxBox";
+            documentoTxBox.Size = new Size(165, 23);
+            documentoTxBox.TabIndex = 4;
+            documentoTxBox.KeyPress += documentoTxBox_KeyPress;
             // 
-            // textBox1
+            // documentoLabel
             // 
-            textBox1.Location = new Point(26, 102);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 23);
-            textBox1.TabIndex = 4;
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Location = new Point(25, 137);
-            label4.Name = "label4";
-            label4.Size = new Size(39, 15);
-            label4.TabIndex = 3;
-            label4.Text = "Senha";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(25, 84);
-            label3.Name = "label3";
-            label3.Size = new Size(70, 15);
-            label3.TabIndex = 2;
-            label3.Text = "Documento";
+            documentoLabel.AutoSize = true;
+            documentoLabel.Location = new Point(25, 84);
+            documentoLabel.Name = "documentoLabel";
+            documentoLabel.Size = new Size(70, 15);
+            documentoLabel.TabIndex = 2;
+            documentoLabel.Text = "Documento";
             // 
             // label1
             // 
@@ -127,37 +106,28 @@
             optionsLogin.Size = new Size(165, 23);
             optionsLogin.TabIndex = 0;
             optionsLogin.TabStop = false;
+            optionsLogin.SelectedIndexChanged += optionsLogin_SelectedIndexChanged;
             // 
-            // label5
+            // btnAbirLoginSecundario
             // 
-            label5.AutoSize = true;
-            label5.Location = new Point(234, 360);
-            label5.Name = "label5";
-            label5.Size = new Size(127, 15);
-            label5.TabIndex = 9;
-            label5.Text = "Ainda não cadastrado?";
+            btnAbirLoginSecundario.AutoSize = true;
+            btnAbirLoginSecundario.Location = new Point(234, 331);
+            btnAbirLoginSecundario.Name = "btnAbirLoginSecundario";
+            btnAbirLoginSecundario.Size = new Size(91, 15);
+            btnAbirLoginSecundario.TabIndex = 10;
+            btnAbirLoginSecundario.TabStop = true;
+            btnAbirLoginSecundario.Text = "Sou funcionário";
+            btnAbirLoginSecundario.LinkClicked += btnAbirLoginSecundario_LinkClicked;
             // 
-            // btnCadastrarLogin
-            // 
-            btnCadastrarLogin.AutoSize = true;
-            btnCadastrarLogin.Location = new Point(234, 375);
-            btnCadastrarLogin.Name = "btnCadastrarLogin";
-            btnCadastrarLogin.Size = new Size(57, 15);
-            btnCadastrarLogin.TabIndex = 10;
-            btnCadastrarLogin.TabStop = true;
-            btnCadastrarLogin.Text = "Cadastrar";
-            btnCadastrarLogin.LinkClicked += btnCadastrarLogin_LinkClicked;
-            // 
-            // Login
+            // LoginPrincipal
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(705, 450);
-            Controls.Add(btnCadastrarLogin);
-            Controls.Add(label5);
+            Controls.Add(btnAbirLoginSecundario);
             Controls.Add(groupBox1);
             Controls.Add(label2);
-            Name = "Login";
+            Name = "LoginPrincipal";
             Text = "Login";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
@@ -169,14 +139,11 @@
 
         private Label label2;
         private GroupBox groupBox1;
-        private Label label4;
-        private Label label3;
+        private Label documentoLabel;
         private Label label1;
         private ComboBox optionsLogin;
         private Button btnEntrarLogin;
-        private TextBox textBox2;
-        private TextBox textBox1;
-        private Label label5;
-        private LinkLabel btnCadastrarLogin;
+        private TextBox documentoTxBox;
+        private LinkLabel btnAbirLoginSecundario;
     }
 }

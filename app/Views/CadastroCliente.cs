@@ -54,7 +54,7 @@ namespace app.Views
                 pessoaFisica.Nome = nomeRzSocialTxBox.Text;
 
                 var erros = ModelDataValidation.ObterValidacao(pessoaFisica);
-                foreach(var erro in erros)
+                foreach (var erro in erros)
                 {
                     MessageBox.Show(erro.ErrorMessage);
                 }

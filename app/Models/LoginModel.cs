@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace app.Models
 {
-    internal class LoginModel
+    public class LoginModel
     {
         public int Id { get; set; }
         public string? Senha { get; set; }

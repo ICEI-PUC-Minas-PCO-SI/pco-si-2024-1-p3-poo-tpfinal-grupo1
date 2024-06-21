@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace app.Repositories
 {
-    internal abstract class BaseRepository
+    public abstract class BaseRepository
     {
         protected string connectionString =
             "Server = localhost,1433; Database=energia;User ID = sa; Password=Luanna21**;trustservercertificate=true;";

@@ -64,3 +64,5 @@ C:\Users\Notebook\OneDrive\Documentos\Atividades Faculdade\POO\TP-Final\pco-si-2
 C:\Users\Notebook\OneDrive\Documentos\Atividades Faculdade\POO\TP-Final\pco-si-2024-1-p3-poo-tpfinal-grupo1\app\obj\Debug\net7.0-windows\app.Views.LoginPrincipal.resources
 C:\Users\Notebook\OneDrive\Documentos\Atividades Faculdade\POO\TP-Final\pco-si-2024-1-p3-poo-tpfinal-grupo1\app\obj\Debug\net7.0-windows\app.Views.LoginSecundario.resources
 C:\Users\Notebook\OneDrive\Documentos\Atividades Faculdade\POO\TP-Final\pco-si-2024-1-p3-poo-tpfinal-grupo1\app\obj\Debug\net7.0-windows\app.Views.AdministradorMain.resources
+C:\Users\Notebook\OneDrive\Documentos\Atividades Faculdade\POO\TP-Final\pco-si-2024-1-p3-poo-tpfinal-grupo1\app\obj\Debug\net7.0-windows\app.ClienteMain.resources
+C:\Users\Notebook\OneDrive\Documentos\Atividades Faculdade\POO\TP-Final\pco-si-2024-1-p3-poo-tpfinal-grupo1\app\obj\Debug\net7.0-windows\app.Views.LeituristaMain.resources

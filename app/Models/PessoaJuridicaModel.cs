@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace app.Models
 {
-    internal class PessoaJuridicaModel : PessoaModel
+    public class PessoaJuridicaModel : PessoaModel
     {
         public string? CNPJ { get; set; }
 

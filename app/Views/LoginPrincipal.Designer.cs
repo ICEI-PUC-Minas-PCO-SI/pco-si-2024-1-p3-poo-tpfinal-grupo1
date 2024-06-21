@@ -70,6 +70,7 @@
             btnEntrarLogin.TabIndex = 6;
             btnEntrarLogin.Text = "ENTRAR";
             btnEntrarLogin.UseVisualStyleBackColor = true;
+            btnEntrarLogin.Click += btnEntrarLogin_Click;
             // 
             // documentoTxBox
             // 

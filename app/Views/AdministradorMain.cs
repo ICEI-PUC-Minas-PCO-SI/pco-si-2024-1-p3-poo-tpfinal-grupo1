@@ -15,6 +15,7 @@ namespace app.Views
     public partial class AdministradorMain : Form
     {
         PessoaFisicaRepository clientePF = new PessoaFisicaRepository();
+        public AdministradorModel admLogado { get; set; }
         public AdministradorMain()
         {
             InitializeComponent();
@@ -42,6 +43,11 @@ namespace app.Views
                 nomeRzSocialGB.Text = "Razão Social";
                 documentoTxBox.MaxLength = 14;
             }
+        }
+
+        private void cadastrarPessoaBtn_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

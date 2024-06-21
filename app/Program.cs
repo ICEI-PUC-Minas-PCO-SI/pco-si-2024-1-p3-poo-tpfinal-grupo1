@@ -22,7 +22,7 @@ namespace app
             //var conec = new PessoaFisicaRepository();
             //conec.Adicionar(pessoaFisica);
             //conec.Deletar(6);
-            Application.Run(new AdministradorMain());
+            Application.Run(new LoginPrincipal());
         }
     }
 }

@@ -199,6 +199,7 @@
             cadastrarPessoaBtn.TabIndex = 15;
             cadastrarPessoaBtn.Text = "CADASTRAR";
             cadastrarPessoaBtn.UseVisualStyleBackColor = true;
+            cadastrarPessoaBtn.Click += cadastrarPessoaBtn_Click;
             // 
             // label2
             // 

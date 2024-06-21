@@ -7,8 +7,9 @@ using System.Threading.Tasks;
 
 namespace app.Models
 {
-    internal class AdministradorModel : PessoaModel
+    public class AdministradorModel : PessoaModel
     {
+        [Required(ErrorMessage = "Matrícula é necessária", AllowEmptyStrings = false)]
         public string? Matricula { get; set; }
 
         [Required(ErrorMessage = "Nome é necessário", AllowEmptyStrings = false)]

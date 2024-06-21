@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace app.Models
 {
-    internal class PessoaFisicaModel : PessoaModel
+    public class PessoaFisicaModel : PessoaModel
     {
         [Required(ErrorMessage = "CPF é necessário", AllowEmptyStrings = false)]
         [StringLength(11, MinimumLength = 11, ErrorMessage =

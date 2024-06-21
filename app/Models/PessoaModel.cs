@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace app.Models
 {
-    internal abstract class PessoaModel
+    public abstract class PessoaModel
     {
         public int Id { get; set; }
 

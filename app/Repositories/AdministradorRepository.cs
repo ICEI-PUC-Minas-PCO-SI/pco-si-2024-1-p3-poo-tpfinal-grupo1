@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace app.Repositories
 {
-    internal class AdministradorRepository : BaseRepository, IAdministradorRepository
+    public class AdministradorRepository : BaseRepository, IAdministradorRepository
     {
         public void Adicionar(AdministradorModel administradorModel)
         {
@@ -51,7 +51,20 @@ namespace app.Repositories
 
         public List<AdministradorModel> Obter(string value)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var selectQuery = @"SELECT 
+                                        Administrador.Nome as Nome,
+                                        Pessoa.Email as Email,
+                                        Administrador.Matricula as Matricula,
+                                        Pessoa.Telefone as Telefone,
+                                        Pessoa.Id as Id
+                                    FROM 
+                                        Pessoa
+                                    INNER JOIN Administrador ON Pessoa.Id = Administrador.IdPessoa
+                                    where Matricula = @value or Nome = @value;";
+                return connection.Query<AdministradorModel>(selectQuery, new { value }).ToList();
+            }
         }
     }
 }

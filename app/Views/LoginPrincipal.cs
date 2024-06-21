@@ -1,4 +1,6 @@
-﻿using System;
+﻿using app.Models;
+using app.Presenters;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace app.Views
 {
     public partial class LoginPrincipal : Form
     {
+        PessoaFisicaModel pessoaFisica = new PessoaFisicaModel();
+        PessoaJuridicaModel pessoaJuridica = new PessoaJuridicaModel();
         public LoginPrincipal()
         {
             InitializeComponent();
@@ -40,5 +44,34 @@ namespace app.Views
 
         private void documentoTxBox_KeyPress(object sender, KeyPressEventArgs e)
             => e.Handled = !char.IsNumber(e.KeyChar);
+
+        private void btnEntrarLogin_Click(object sender, EventArgs e)
+        {
+            if (optionsLogin.SelectedIndex == 0)
+            {
+                pessoaFisica.CPF = documentoTxBox.Text;
+                if (ValidacaoLoginCliente.PessoaFisicaExiste(pessoaFisica.CPF))
+                {
+                    var clienteForm = new ClienteMain(pessoaFisica);
+                    clienteForm.Show();
+                } else
+                {
+                    documentoTxBox.Text = string.Empty;
+                    MessageBox.Show("CPF não cadastrado", "Atenção!");
+                }
+            } else if (optionsLogin.SelectedIndex == 1)
+            {
+                pessoaJuridica.CNPJ = documentoTxBox.Text;
+                if (ValidacaoLoginCliente.PessoaJuridicaExiste(pessoaJuridica.CNPJ))
+                {
+                    var clienteForm = new ClienteMain(pessoaJuridica);
+                    clienteForm.Show();
+                } else
+                {
+                    documentoTxBox.Text = string.Empty;
+                    MessageBox.Show("CNPJ não cadastrado", "Atenção!");
+                }
+            }
+        }
     }
 }

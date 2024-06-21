@@ -51,7 +51,20 @@ namespace app.Repositories
 
         public List<LeituristaModel> Obter(string value)
         {
-            throw new NotImplementedException();
+            using (var connection = new SqlConnection(connectionString))
+            {
+                var selectQuery = @"SELECT 
+                                        Leiturista.Nome as Nome,
+                                        Pessoa.Email as Email,
+                                        Leiturista.Matricula as Matricula,
+                                        Pessoa.Telefone as Telefone,
+                                        Pessoa.Id as Id
+                                    FROM 
+                                        Pessoa
+                                    INNER JOIN Leiturista ON Pessoa.Id = Leiturista.IdPessoa
+                                    where Matricula = @value or Nome = @value;";
+                return connection.Query<LeituristaModel>(selectQuery, new { value }).ToList();
+            }
         }
     }
 }

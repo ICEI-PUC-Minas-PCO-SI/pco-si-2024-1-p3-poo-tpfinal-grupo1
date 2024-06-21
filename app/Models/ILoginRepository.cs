@@ -11,6 +11,6 @@ namespace app.Models
         void Adicionar(LoginModel login);
         void Editar(LoginModel login);
         void Deletar(int Id);
-        List<LoginModel> Obter(string value);
+        string Obter(string value);
     }
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace app.Models
 {
-    internal class LeituristaModel : PessoaModel
+    public class LeituristaModel : PessoaModel
     {
         public string? Matricula { get; set; }
 

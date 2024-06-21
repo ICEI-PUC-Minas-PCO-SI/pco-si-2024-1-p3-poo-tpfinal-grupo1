@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace app.Repositories
 {
-    internal class LoginRepository : BaseRepository, ILoginRepository
+    public class LoginRepository : BaseRepository, ILoginRepository
     {
         public void Adicionar(LoginModel login)
         {
@@ -36,9 +36,16 @@ namespace app.Repositories
             throw new NotImplementedException();
         }
 
-        public List<LoginModel> Obter(string value)
+        public string Obter(string value)
         {
-            throw new NotImplementedException();
+            using(var connection = new SqlConnection(connectionString))
+            {
+                var selectQuery = @"SELECT 
+                                        Senha
+                                    FROM Login 
+                                    Where Id = @value";
+                return connection.ExecuteScalar<string>(selectQuery, new { value });
+            }
         }
     }
 }

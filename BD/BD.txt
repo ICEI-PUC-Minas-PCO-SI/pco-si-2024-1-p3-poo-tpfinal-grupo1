@@ -1,0 +1,27 @@
+CREATE TABLE usuario (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    nome VARCHAR(255) NOT NULL,
+ cargo VARCHAR (10),
+    carteira_trabalho VARCHAR(255),
+    email VARCHAR(255) UNIQUE NOT NULL,
+    criar_contar BIT,
+    cnpj VARCHAR(14) UNIQUE NOT NULL
+    cpf VARCHAR(11) UNIQUE NOT NULL
+    );
+CREATE TABLE ContaDeEnergia (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    tipo VARCHAR(255),
+    medida_atual FLOAT
+    leitura_mes_atual FLOAT,
+    leitura_mes_anterior FLOAT,
+    numero_registro VARCHAR(255),
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id)
+);
+CREATE TABLE Login (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    email VARCHAR(255) NOT NULL,
+    senha VARCHAR (8) NOT NULL,
+    usuario_id INT,
+    FOREIGN KEY (usuario_id) REFERENCES usuario(id)
+);

@@ -40,7 +40,18 @@ namespace app.Repositories
 
         public void Editar(ContaDeEnergiaModel contaDeEnergia)
         {
-            throw new NotImplementedException();
+            using(var connection = new SqlConnection(connectionString))
+            {
+                var updateSQL = @"UPDATE ContaDeEnergia
+                                  Set KWhMesAtual = @KWhMesAtual, 
+                                      KWhMesAnterior = @KWhMesAnterior
+                                 WHERE NumInstalacao = @NumInstalacao";
+                connection.Execute(updateSQL, new {
+                    contaDeEnergia.KWhMesAtual,
+                    contaDeEnergia.KWhMesAnterior,
+                    contaDeEnergia.NumInstalacao
+                });
+            }
         }
 
         public List<ContaDeEnergiaModel> Obter(string idPessoa)

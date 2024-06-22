@@ -71,6 +71,9 @@ namespace app.Views
                     documentoTxBox.Text = string.Empty;
                     MessageBox.Show("CNPJ não cadastrado", "Atenção!");
                 }
+            } else
+            {
+                MessageBox.Show("Escolha se é pessoa física ou pessoa jurídica", "Atenção!");
             }
         }
     }

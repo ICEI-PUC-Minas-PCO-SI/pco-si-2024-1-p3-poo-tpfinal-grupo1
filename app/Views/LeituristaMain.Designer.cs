@@ -41,65 +41,81 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(229, 18);
+            label1.Font = new Font("Cambria", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.ForeColor = Color.Green;
+            label1.Location = new Point(262, 24);
             label1.Name = "label1";
-            label1.Size = new Size(203, 32);
+            label1.Size = new Size(250, 36);
             label1.TabIndex = 2;
             label1.Text = "Registrar Leitura";
             // 
             // groupBox5
             // 
             groupBox5.Controls.Add(textBox2);
-            groupBox5.Location = new Point(232, 79);
+            groupBox5.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox5.Location = new Point(265, 105);
+            groupBox5.Margin = new Padding(3, 4, 3, 4);
             groupBox5.Name = "groupBox5";
-            groupBox5.Size = new Size(209, 72);
+            groupBox5.Padding = new Padding(3, 4, 3, 4);
+            groupBox5.Size = new Size(239, 96);
             groupBox5.TabIndex = 17;
             groupBox5.TabStop = false;
             groupBox5.Text = "Número de registro";
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(6, 28);
+            textBox2.Location = new Point(7, 37);
+            textBox2.Margin = new Padding(3, 4, 3, 4);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(165, 23);
+            textBox2.Size = new Size(188, 25);
             textBox2.TabIndex = 0;
             // 
             // groupBox2
             // 
             groupBox2.Controls.Add(textBox1);
-            groupBox2.Location = new Point(232, 157);
+            groupBox2.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            groupBox2.Location = new Point(265, 209);
+            groupBox2.Margin = new Padding(3, 4, 3, 4);
             groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(209, 72);
+            groupBox2.Padding = new Padding(3, 4, 3, 4);
+            groupBox2.Size = new Size(239, 96);
             groupBox2.TabIndex = 18;
             groupBox2.TabStop = false;
             groupBox2.Text = "Valor medido em KWh";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(6, 28);
+            textBox1.Location = new Point(7, 37);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 23);
+            textBox1.Size = new Size(188, 25);
             textBox1.TabIndex = 0;
             // 
             // button1
             // 
-            button1.Location = new Point(275, 250);
+            button1.BackColor = Color.Green;
+            button1.FlatStyle = FlatStyle.Popup;
+            button1.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.ForeColor = SystemColors.ButtonHighlight;
+            button1.Location = new Point(314, 333);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(112, 24);
+            button1.Size = new Size(128, 32);
             button1.TabIndex = 19;
             button1.Text = "REGISTRAR";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             // 
             // LeituristaMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(660, 437);
+            BackColor = Color.FromArgb(187, 218, 119);
+            ClientSize = new Size(754, 583);
             Controls.Add(button1);
             Controls.Add(groupBox2);
             Controls.Add(groupBox5);
             Controls.Add(label1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LeituristaMain";
             Text = "LeituristaMain";
             groupBox5.ResumeLayout(false);

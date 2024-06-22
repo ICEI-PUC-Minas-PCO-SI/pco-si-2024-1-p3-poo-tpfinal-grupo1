@@ -42,10 +42,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(259, 57);
+            label2.Font = new Font("Cambria", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Green;
+            label2.Location = new Point(296, 76);
             label2.Name = "label2";
-            label2.Size = new Size(166, 32);
+            label2.Size = new Size(197, 36);
             label2.TabIndex = 7;
             label2.Text = "FAZER LOGIN";
             // 
@@ -56,45 +57,55 @@
             groupBox1.Controls.Add(documentoLabel);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(optionsLogin);
-            groupBox1.Location = new Point(234, 118);
+            groupBox1.Location = new Point(267, 157);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(226, 201);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(258, 268);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             // 
             // btnEntrarLogin
             // 
-            btnEntrarLogin.Location = new Point(26, 148);
+            btnEntrarLogin.BackColor = Color.Green;
+            btnEntrarLogin.FlatStyle = FlatStyle.Popup;
+            btnEntrarLogin.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEntrarLogin.ForeColor = SystemColors.ButtonHighlight;
+            btnEntrarLogin.Location = new Point(30, 197);
+            btnEntrarLogin.Margin = new Padding(3, 4, 3, 4);
             btnEntrarLogin.Name = "btnEntrarLogin";
-            btnEntrarLogin.Size = new Size(165, 23);
+            btnEntrarLogin.Size = new Size(189, 31);
             btnEntrarLogin.TabIndex = 6;
             btnEntrarLogin.Text = "ENTRAR";
-            btnEntrarLogin.UseVisualStyleBackColor = true;
+            btnEntrarLogin.UseVisualStyleBackColor = false;
             btnEntrarLogin.Click += btnEntrarLogin_Click;
             // 
             // documentoTxBox
             // 
-            documentoTxBox.Location = new Point(26, 102);
+            documentoTxBox.Location = new Point(30, 136);
+            documentoTxBox.Margin = new Padding(3, 4, 3, 4);
             documentoTxBox.Name = "documentoTxBox";
-            documentoTxBox.Size = new Size(165, 23);
+            documentoTxBox.Size = new Size(188, 27);
             documentoTxBox.TabIndex = 4;
             documentoTxBox.KeyPress += documentoTxBox_KeyPress;
             // 
             // documentoLabel
             // 
             documentoLabel.AutoSize = true;
-            documentoLabel.Location = new Point(25, 84);
+            documentoLabel.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            documentoLabel.Location = new Point(29, 112);
             documentoLabel.Name = "documentoLabel";
-            documentoLabel.Size = new Size(70, 15);
+            documentoLabel.Size = new Size(81, 17);
             documentoLabel.TabIndex = 2;
             documentoLabel.Text = "Documento";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 30);
+            label1.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(29, 40);
             label1.Name = "label1";
-            label1.Size = new Size(135, 15);
+            label1.Size = new Size(161, 17);
             label1.TabIndex = 1;
             label1.Text = "Pessoa Física ou Jurídica";
             // 
@@ -102,9 +113,10 @@
             // 
             optionsLogin.AllowDrop = true;
             optionsLogin.Items.AddRange(new object[] { "Pessoa Física", "Pessoa Jurídica" });
-            optionsLogin.Location = new Point(26, 48);
+            optionsLogin.Location = new Point(30, 64);
+            optionsLogin.Margin = new Padding(3, 4, 3, 4);
             optionsLogin.Name = "optionsLogin";
-            optionsLogin.Size = new Size(165, 23);
+            optionsLogin.Size = new Size(188, 28);
             optionsLogin.TabIndex = 0;
             optionsLogin.TabStop = false;
             optionsLogin.SelectedIndexChanged += optionsLogin_SelectedIndexChanged;
@@ -112,9 +124,11 @@
             // btnAbirLoginSecundario
             // 
             btnAbirLoginSecundario.AutoSize = true;
-            btnAbirLoginSecundario.Location = new Point(234, 331);
+            btnAbirLoginSecundario.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnAbirLoginSecundario.LinkColor = Color.Green;
+            btnAbirLoginSecundario.Location = new Point(267, 441);
             btnAbirLoginSecundario.Name = "btnAbirLoginSecundario";
-            btnAbirLoginSecundario.Size = new Size(91, 15);
+            btnAbirLoginSecundario.Size = new Size(107, 17);
             btnAbirLoginSecundario.TabIndex = 10;
             btnAbirLoginSecundario.TabStop = true;
             btnAbirLoginSecundario.Text = "Sou funcionário";
@@ -122,12 +136,14 @@
             // 
             // LoginPrincipal
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(705, 450);
+            BackColor = Color.FromArgb(187, 218, 119);
+            ClientSize = new Size(806, 600);
             Controls.Add(btnAbirLoginSecundario);
             Controls.Add(groupBox1);
             Controls.Add(label2);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginPrincipal";
             Text = "Login";
             groupBox1.ResumeLayout(false);

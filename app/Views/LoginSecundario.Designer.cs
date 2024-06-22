@@ -44,12 +44,14 @@
             // btnEncerrarLogin
             // 
             btnEncerrarLogin.AutoSize = true;
-            btnEncerrarLogin.Location = new Point(237, 384);
+            btnEncerrarLogin.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEncerrarLogin.LinkColor = Color.Green;
+            btnEncerrarLogin.Location = new Point(271, 523);
             btnEncerrarLogin.Name = "btnEncerrarLogin";
-            btnEncerrarLogin.Size = new Size(37, 15);
+            btnEncerrarLogin.Size = new Size(46, 17);
             btnEncerrarLogin.TabIndex = 13;
             btnEncerrarLogin.TabStop = true;
-            btnEncerrarLogin.Text = "voltar";
+            btnEncerrarLogin.Text = "Voltar";
             btnEncerrarLogin.LinkClicked += btnEncerrarLogin_LinkClicked;
             // 
             // groupBox1
@@ -61,64 +63,76 @@
             groupBox1.Controls.Add(label3);
             groupBox1.Controls.Add(label1);
             groupBox1.Controls.Add(optionsLogin);
-            groupBox1.Location = new Point(237, 139);
+            groupBox1.Location = new Point(271, 185);
+            groupBox1.Margin = new Padding(3, 4, 3, 4);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(227, 242);
+            groupBox1.Padding = new Padding(3, 4, 3, 4);
+            groupBox1.Size = new Size(259, 323);
             groupBox1.TabIndex = 12;
             groupBox1.TabStop = false;
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(25, 138);
+            label4.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label4.Location = new Point(29, 184);
             label4.Name = "label4";
-            label4.Size = new Size(39, 15);
+            label4.Size = new Size(45, 17);
             label4.TabIndex = 8;
             label4.Text = "Senha";
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(25, 156);
+            textBox1.Location = new Point(29, 208);
+            textBox1.Margin = new Padding(3, 4, 3, 4);
             textBox1.MaxLength = 15;
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 23);
+            textBox1.Size = new Size(188, 27);
             textBox1.TabIndex = 7;
             textBox1.UseSystemPasswordChar = true;
             // 
             // btnEntrarLogin
             // 
-            btnEntrarLogin.Location = new Point(25, 200);
+            btnEntrarLogin.BackColor = Color.Green;
+            btnEntrarLogin.FlatStyle = FlatStyle.Popup;
+            btnEntrarLogin.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnEntrarLogin.ForeColor = SystemColors.ButtonHighlight;
+            btnEntrarLogin.Location = new Point(29, 267);
+            btnEntrarLogin.Margin = new Padding(3, 4, 3, 4);
             btnEntrarLogin.Name = "btnEntrarLogin";
-            btnEntrarLogin.Size = new Size(165, 23);
+            btnEntrarLogin.Size = new Size(189, 31);
             btnEntrarLogin.TabIndex = 6;
             btnEntrarLogin.Text = "ENTRAR";
-            btnEntrarLogin.UseVisualStyleBackColor = true;
+            btnEntrarLogin.UseVisualStyleBackColor = false;
             btnEntrarLogin.Click += btnEntrarLogin_Click;
             // 
             // matriculaTxBox
             // 
-            matriculaTxBox.Location = new Point(26, 102);
+            matriculaTxBox.Location = new Point(30, 136);
+            matriculaTxBox.Margin = new Padding(3, 4, 3, 4);
             matriculaTxBox.MaxLength = 6;
             matriculaTxBox.Name = "matriculaTxBox";
-            matriculaTxBox.Size = new Size(165, 23);
+            matriculaTxBox.Size = new Size(188, 27);
             matriculaTxBox.TabIndex = 4;
             matriculaTxBox.KeyPress += matriculaTxBox_KeyPress;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(25, 84);
+            label3.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.Location = new Point(29, 112);
             label3.Name = "label3";
-            label3.Size = new Size(57, 15);
+            label3.Size = new Size(68, 17);
             label3.TabIndex = 2;
             label3.Text = "Matrícula";
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(25, 30);
+            label1.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(29, 40);
             label1.Name = "label1";
-            label1.Size = new Size(151, 15);
+            label1.Size = new Size(181, 17);
             label1.TabIndex = 1;
             label1.Text = "Administrador ou Leiturista";
             // 
@@ -126,30 +140,34 @@
             // 
             optionsLogin.AllowDrop = true;
             optionsLogin.Items.AddRange(new object[] { "Administrador", "Leiturista" });
-            optionsLogin.Location = new Point(26, 48);
+            optionsLogin.Location = new Point(30, 64);
+            optionsLogin.Margin = new Padding(3, 4, 3, 4);
             optionsLogin.Name = "optionsLogin";
-            optionsLogin.Size = new Size(165, 23);
+            optionsLogin.Size = new Size(188, 28);
             optionsLogin.TabIndex = 0;
             optionsLogin.TabStop = false;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(262, 78);
+            label2.Font = new Font("Cambria", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label2.ForeColor = Color.Green;
+            label2.Location = new Point(301, 109);
             label2.Name = "label2";
-            label2.Size = new Size(166, 32);
+            label2.Size = new Size(197, 36);
             label2.TabIndex = 11;
             label2.Text = "FAZER LOGIN";
             // 
             // LoginSecundario
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 445);
+            BackColor = Color.FromArgb(187, 218, 119);
+            ClientSize = new Size(800, 593);
             Controls.Add(btnEncerrarLogin);
             Controls.Add(groupBox1);
             Controls.Add(label2);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "LoginSecundario";
             Text = "LoginSecundario";
             groupBox1.ResumeLayout(false);

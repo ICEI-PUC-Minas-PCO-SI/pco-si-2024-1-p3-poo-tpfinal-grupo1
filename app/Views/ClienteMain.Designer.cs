@@ -43,61 +43,69 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label1.Location = new Point(53, 139);
+            label1.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.ForeColor = Color.Green;
+            label1.Location = new Point(61, 185);
             label1.Name = "label1";
-            label1.Size = new Size(234, 25);
+            label1.Size = new Size(254, 27);
             label1.TabIndex = 0;
             label1.Text = "Consumo no último mês:\r\n";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.Location = new Point(53, 183);
+            label2.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.ForeColor = Color.Green;
+            label2.Location = new Point(61, 244);
             label2.Name = "label2";
-            label2.Size = new Size(192, 25);
+            label2.Size = new Size(208, 27);
             label2.TabIndex = 1;
             label2.Text = "Valor total da conta:\r\n";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label3.Location = new Point(53, 226);
+            label3.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label3.ForeColor = Color.Green;
+            label3.Location = new Point(61, 301);
             label3.Name = "label3";
-            label3.Size = new Size(236, 25);
+            label3.Size = new Size(260, 27);
             label3.TabIndex = 2;
             label3.Text = "Valor total sem impostos:";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 18F, FontStyle.Bold, GraphicsUnit.Point);
-            label4.Location = new Point(287, 76);
+            label4.Font = new Font("Cambria", 18F, FontStyle.Bold, GraphicsUnit.Point);
+            label4.ForeColor = Color.Green;
+            label4.Location = new Point(328, 101);
             label4.Name = "label4";
-            label4.Size = new Size(114, 32);
+            label4.Size = new Size(133, 36);
             label4.TabIndex = 3;
             label4.Text = "RESUMO";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            label5.Location = new Point(12, 9);
+            label5.BackColor = Color.White;
+            label5.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            label5.ForeColor = Color.Green;
+            label5.Location = new Point(14, 12);
             label5.Name = "label5";
-            label5.Size = new Size(46, 25);
+            label5.Size = new Size(49, 27);
             label5.TabIndex = 5;
             label5.Text = "Olá,";
             // 
             // splitter1
             // 
             splitter1.AccessibleRole = AccessibleRole.None;
+            splitter1.BackColor = Color.White;
             splitter1.BorderStyle = BorderStyle.Fixed3D;
             splitter1.Dock = DockStyle.Top;
             splitter1.Location = new Point(0, 0);
+            splitter1.Margin = new Padding(3, 4, 3, 4);
             splitter1.Name = "splitter1";
-            splitter1.Size = new Size(705, 44);
+            splitter1.Size = new Size(806, 57);
             splitter1.TabIndex = 6;
             splitter1.TabStop = false;
             // 
@@ -105,46 +113,50 @@
             // 
             nomeUsuario.AutoSize = true;
             nomeUsuario.Font = new Font("Segoe UI", 14F, FontStyle.Bold, GraphicsUnit.Point);
-            nomeUsuario.Location = new Point(53, 9);
+            nomeUsuario.Location = new Point(61, 12);
             nomeUsuario.Name = "nomeUsuario";
-            nomeUsuario.Size = new Size(0, 25);
+            nomeUsuario.Size = new Size(0, 32);
             nomeUsuario.TabIndex = 7;
             // 
             // consumoUltimoMesLabel
             // 
             consumoUltimoMesLabel.AutoSize = true;
-            consumoUltimoMesLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            consumoUltimoMesLabel.Location = new Point(293, 139);
+            consumoUltimoMesLabel.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            consumoUltimoMesLabel.ForeColor = Color.Green;
+            consumoUltimoMesLabel.Location = new Point(380, 185);
             consumoUltimoMesLabel.Name = "consumoUltimoMesLabel";
-            consumoUltimoMesLabel.Size = new Size(24, 25);
+            consumoUltimoMesLabel.Size = new Size(27, 27);
             consumoUltimoMesLabel.TabIndex = 8;
             consumoUltimoMesLabel.Text = "...";
             // 
             // valorTotalContaLabel
             // 
             valorTotalContaLabel.AutoSize = true;
-            valorTotalContaLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            valorTotalContaLabel.Location = new Point(251, 183);
+            valorTotalContaLabel.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            valorTotalContaLabel.ForeColor = Color.Green;
+            valorTotalContaLabel.Location = new Point(313, 244);
             valorTotalContaLabel.Name = "valorTotalContaLabel";
-            valorTotalContaLabel.Size = new Size(24, 25);
+            valorTotalContaLabel.Size = new Size(27, 27);
             valorTotalContaLabel.TabIndex = 10;
             valorTotalContaLabel.Text = "...";
             // 
             // valorTotalSemImpostosLabel
             // 
             valorTotalSemImpostosLabel.AutoSize = true;
-            valorTotalSemImpostosLabel.Font = new Font("Segoe UI", 14F, FontStyle.Regular, GraphicsUnit.Point);
-            valorTotalSemImpostosLabel.Location = new Point(295, 226);
+            valorTotalSemImpostosLabel.Font = new Font("Cambria", 13.8F, FontStyle.Regular, GraphicsUnit.Point);
+            valorTotalSemImpostosLabel.ForeColor = Color.Green;
+            valorTotalSemImpostosLabel.Location = new Point(380, 301);
             valorTotalSemImpostosLabel.Name = "valorTotalSemImpostosLabel";
-            valorTotalSemImpostosLabel.Size = new Size(24, 25);
+            valorTotalSemImpostosLabel.Size = new Size(27, 27);
             valorTotalSemImpostosLabel.TabIndex = 11;
             valorTotalSemImpostosLabel.Text = "...";
             // 
             // ClienteMain
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(705, 417);
+            BackColor = Color.FromArgb(187, 218, 119);
+            ClientSize = new Size(806, 556);
             Controls.Add(valorTotalSemImpostosLabel);
             Controls.Add(valorTotalContaLabel);
             Controls.Add(consumoUltimoMesLabel);
@@ -155,6 +167,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(splitter1);
+            Margin = new Padding(3, 4, 3, 4);
             Name = "ClienteMain";
             Text = "ClienteMain";
             ResumeLayout(false);

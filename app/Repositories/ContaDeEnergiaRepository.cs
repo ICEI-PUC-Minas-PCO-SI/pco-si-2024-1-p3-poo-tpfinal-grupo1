@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace app.Repositories
 {
-    internal class ContaDeEnergiaRepository : BaseRepository, IContaDeEnergiaRepository
+    public class ContaDeEnergiaRepository : BaseRepository, IContaDeEnergiaRepository
     {
         public void Adicionar(ContaDeEnergiaModel contaDeEnergia)
         {
@@ -40,10 +40,22 @@ namespace app.Repositories
 
         public void Editar(ContaDeEnergiaModel contaDeEnergia)
         {
-            throw new NotImplementedException();
+            using(var connection = new SqlConnection(connectionString))
+            {
+                var updateQuery = @"UPDATE ContaDeEnergia
+                                    SET KWhMesAtual = @KWhMesAtual, 
+                                        KWhMesAnterior = @KWhMesAnterior
+                                    Where NumInstalacao = @NumInstalacao";
+                connection.Execute(updateQuery, new
+                {
+                    contaDeEnergia.KWhMesAtual,
+                    contaDeEnergia.KWhMesAnterior,
+                    contaDeEnergia.NumInstalacao
+                });
+            }
         }
 
-        public List<ContaDeEnergiaModel> Obter(string idPessoa)
+        public List<ContaDeEnergiaModel> Obter(string value)
         {
             using(var connection = new SqlConnection(connectionString))
             {
@@ -51,8 +63,7 @@ namespace app.Repositories
                                     SELECT 
                                         *
                                     FROM ContaDeEnergia
-                                    WHERE IdPessoa = @idPessoa;", new { idPessoa});
-                
+                                    WHERE NumInstalacao = @value;", new { value});
                 return contasDeEnergia.ToList();
             }
         }

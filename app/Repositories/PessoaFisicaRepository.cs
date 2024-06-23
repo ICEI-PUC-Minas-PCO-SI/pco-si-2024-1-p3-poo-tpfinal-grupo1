@@ -74,7 +74,7 @@ namespace app.Repositories
                                     FROM 
                                         Pessoa
                                     INNER JOIN PessoaFisica ON Pessoa.Id = PessoaFisica.IdPessoa
-                                    where CPF = @value or Nome = @value;";
+                                    where CPF = @value or Nome LIKE @value;";
                 var pessoaFisica = connection.Query<PessoaFisicaModel>(selectQuery, new { value });
                 return pessoaFisica.ToList();
             }

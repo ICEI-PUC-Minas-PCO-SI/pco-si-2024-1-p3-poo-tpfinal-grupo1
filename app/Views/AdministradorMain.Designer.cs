@@ -30,16 +30,21 @@
         {
             tabControl1 = new TabControl();
             Clientes = new TabPage();
-            button4 = new Button();
-            button3 = new Button();
-            textBox1 = new TextBox();
+            associarContaPjTxBox = new TextBox();
+            associarContaPjBtn = new Button();
+            pesquisarPfBtn = new Button();
+            pesquisarPjTxBox = new TextBox();
+            tabelaClientesPJ = new DataGridView();
+            associarContaPfTxBox = new TextBox();
+            pesquisarPjBtn = new Button();
+            pesquisarPfTxBox = new TextBox();
             button2 = new Button();
-            button1 = new Button();
+            associarContaPfBtn = new Button();
             label3 = new Label();
-            dataGridView1 = new DataGridView();
+            tabelaClientesPF = new DataGridView();
             CadastrarCliente = new TabPage();
             groupBox5 = new GroupBox();
-            textBox2 = new TextBox();
+            numInstalacaoCadastramentoTxBox = new TextBox();
             cadastrarPessoaBtn = new Button();
             label2 = new Label();
             nomeRzSocialGB = new GroupBox();
@@ -54,10 +59,10 @@
             documentoTxBox = new TextBox();
             groupBox1 = new GroupBox();
             tipoPessoaOptions = new ComboBox();
-            fontDialog1 = new FontDialog();
             tabControl1.SuspendLayout();
             Clientes.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tabelaClientesPJ).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)tabelaClientesPF).BeginInit();
             CadastrarCliente.SuspendLayout();
             groupBox5.SuspendLayout();
             nomeRzSocialGB.SuspendLayout();
@@ -73,66 +78,117 @@
             tabControl1.Controls.Add(CadastrarCliente);
             tabControl1.Dock = DockStyle.Fill;
             tabControl1.Location = new Point(0, 0);
-            tabControl1.Margin = new Padding(3, 4, 3, 4);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(798, 677);
+            tabControl1.Size = new Size(698, 553);
             tabControl1.TabIndex = 0;
             // 
             // Clientes
             // 
             Clientes.BackColor = Color.FromArgb(187, 218, 119);
-            Clientes.Controls.Add(button4);
-            Clientes.Controls.Add(button3);
-            Clientes.Controls.Add(textBox1);
+            Clientes.Controls.Add(associarContaPjTxBox);
+            Clientes.Controls.Add(associarContaPjBtn);
+            Clientes.Controls.Add(pesquisarPfBtn);
+            Clientes.Controls.Add(pesquisarPjTxBox);
+            Clientes.Controls.Add(tabelaClientesPJ);
+            Clientes.Controls.Add(associarContaPfTxBox);
+            Clientes.Controls.Add(pesquisarPjBtn);
+            Clientes.Controls.Add(pesquisarPfTxBox);
             Clientes.Controls.Add(button2);
-            Clientes.Controls.Add(button1);
+            Clientes.Controls.Add(associarContaPfBtn);
             Clientes.Controls.Add(label3);
-            Clientes.Controls.Add(dataGridView1);
-            Clientes.Location = new Point(4, 29);
-            Clientes.Margin = new Padding(3, 4, 3, 4);
+            Clientes.Controls.Add(tabelaClientesPF);
+            Clientes.Location = new Point(4, 24);
             Clientes.Name = "Clientes";
-            Clientes.Padding = new Padding(3, 4, 3, 4);
-            Clientes.Size = new Size(790, 644);
+            Clientes.Padding = new Padding(3);
+            Clientes.Size = new Size(690, 525);
             Clientes.TabIndex = 0;
             Clientes.Text = "Clientes";
             // 
-            // button4
+            // associarContaPjTxBox
             // 
-            button4.BackColor = Color.Green;
-            button4.FlatStyle = FlatStyle.Popup;
-            button4.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button4.ForeColor = SystemColors.ButtonHighlight;
-            button4.Location = new Point(654, 543);
-            button4.Margin = new Padding(3, 4, 3, 4);
-            button4.Name = "button4";
-            button4.Size = new Size(122, 31);
-            button4.TabIndex = 6;
-            button4.Text = "Remover conta";
-            button4.UseVisualStyleBackColor = false;
+            associarContaPjTxBox.Location = new Point(571, 338);
+            associarContaPjTxBox.MaxLength = 20;
+            associarContaPjTxBox.Name = "associarContaPjTxBox";
+            associarContaPjTxBox.Size = new Size(108, 23);
+            associarContaPjTxBox.TabIndex = 21;
             // 
-            // button3
+            // associarContaPjBtn
             // 
-            button3.BackColor = Color.Green;
-            button3.FlatStyle = FlatStyle.Popup;
-            button3.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.ForeColor = SystemColors.ButtonHighlight;
-            button3.ImageAlign = ContentAlignment.TopCenter;
-            button3.Location = new Point(525, 96);
-            button3.Margin = new Padding(3, 4, 3, 4);
-            button3.Name = "button3";
-            button3.Size = new Size(122, 31);
-            button3.TabIndex = 5;
-            button3.Text = "Pesquisar";
-            button3.UseVisualStyleBackColor = false;
+            associarContaPjBtn.BackColor = Color.Green;
+            associarContaPjBtn.FlatStyle = FlatStyle.Popup;
+            associarContaPjBtn.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            associarContaPjBtn.ForeColor = SystemColors.ButtonHighlight;
+            associarContaPjBtn.Location = new Point(572, 367);
+            associarContaPjBtn.Name = "associarContaPjBtn";
+            associarContaPjBtn.Size = new Size(107, 23);
+            associarContaPjBtn.TabIndex = 20;
+            associarContaPjBtn.Text = "Associar conta";
+            associarContaPjBtn.UseVisualStyleBackColor = false;
+            associarContaPjBtn.Click += associarContaPjBtn_Click;
             // 
-            // textBox1
+            // pesquisarPfBtn
             // 
-            textBox1.Location = new Point(24, 97);
-            textBox1.Margin = new Padding(3, 4, 3, 4);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(487, 27);
-            textBox1.TabIndex = 4;
+            pesquisarPfBtn.BackColor = Color.Green;
+            pesquisarPfBtn.FlatStyle = FlatStyle.Popup;
+            pesquisarPfBtn.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            pesquisarPfBtn.ForeColor = SystemColors.ButtonHighlight;
+            pesquisarPfBtn.ImageAlign = ContentAlignment.TopCenter;
+            pesquisarPfBtn.Location = new Point(454, 73);
+            pesquisarPfBtn.Name = "pesquisarPfBtn";
+            pesquisarPfBtn.Size = new Size(107, 23);
+            pesquisarPfBtn.TabIndex = 19;
+            pesquisarPfBtn.Text = "Pesquisar";
+            pesquisarPfBtn.UseVisualStyleBackColor = false;
+            pesquisarPfBtn.Click += pesquisarPfBtn_Click;
+            // 
+            // pesquisarPjTxBox
+            // 
+            pesquisarPjTxBox.Location = new Point(21, 299);
+            pesquisarPjTxBox.Name = "pesquisarPjTxBox";
+            pesquisarPjTxBox.Size = new Size(427, 23);
+            pesquisarPjTxBox.TabIndex = 18;
+            // 
+            // tabelaClientesPJ
+            // 
+            tabelaClientesPJ.BackgroundColor = Color.White;
+            tabelaClientesPJ.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tabelaClientesPJ.Location = new Point(21, 338);
+            tabelaClientesPJ.Name = "tabelaClientesPJ";
+            tabelaClientesPJ.RowHeadersWidth = 51;
+            tabelaClientesPJ.RowTemplate.Height = 25;
+            tabelaClientesPJ.Size = new Size(545, 171);
+            tabelaClientesPJ.TabIndex = 17;
+            // 
+            // associarContaPfTxBox
+            // 
+            associarContaPfTxBox.Location = new Point(571, 102);
+            associarContaPfTxBox.MaxLength = 20;
+            associarContaPfTxBox.Name = "associarContaPfTxBox";
+            associarContaPfTxBox.Size = new Size(108, 23);
+            associarContaPfTxBox.TabIndex = 16;
+            // 
+            // pesquisarPjBtn
+            // 
+            pesquisarPjBtn.BackColor = Color.Green;
+            pesquisarPjBtn.FlatStyle = FlatStyle.Popup;
+            pesquisarPjBtn.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            pesquisarPjBtn.ForeColor = SystemColors.ButtonHighlight;
+            pesquisarPjBtn.ImageAlign = ContentAlignment.TopCenter;
+            pesquisarPjBtn.Location = new Point(459, 299);
+            pesquisarPjBtn.Name = "pesquisarPjBtn";
+            pesquisarPjBtn.Size = new Size(107, 23);
+            pesquisarPjBtn.TabIndex = 5;
+            pesquisarPjBtn.Text = "Pesquisar";
+            pesquisarPjBtn.UseVisualStyleBackColor = false;
+            pesquisarPjBtn.Click += pesquisarPjBtn_Click;
+            // 
+            // pesquisarPfTxBox
+            // 
+            pesquisarPfTxBox.Location = new Point(21, 73);
+            pesquisarPfTxBox.Name = "pesquisarPfTxBox";
+            pesquisarPfTxBox.Size = new Size(427, 23);
+            pesquisarPfTxBox.TabIndex = 4;
             // 
             // button2
             // 
@@ -140,50 +196,48 @@
             button2.FlatStyle = FlatStyle.Popup;
             button2.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
             button2.ForeColor = SystemColors.ButtonHighlight;
-            button2.Location = new Point(654, 504);
-            button2.Margin = new Padding(3, 4, 3, 4);
+            button2.Location = new Point(575, 474);
             button2.Name = "button2";
-            button2.Size = new Size(122, 31);
+            button2.Size = new Size(107, 23);
             button2.TabIndex = 3;
             button2.Text = "Remover cliente";
             button2.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // associarContaPfBtn
             // 
-            button1.BackColor = Color.Green;
-            button1.FlatStyle = FlatStyle.Popup;
-            button1.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.ForeColor = SystemColors.ButtonHighlight;
-            button1.Location = new Point(654, 287);
-            button1.Margin = new Padding(3, 4, 3, 4);
-            button1.Name = "button1";
-            button1.Size = new Size(122, 31);
-            button1.TabIndex = 15;
-            button1.Text = "Associar conta";
-            button1.UseVisualStyleBackColor = false;
+            associarContaPfBtn.BackColor = Color.Green;
+            associarContaPfBtn.FlatStyle = FlatStyle.Popup;
+            associarContaPfBtn.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            associarContaPfBtn.ForeColor = SystemColors.ButtonHighlight;
+            associarContaPfBtn.Location = new Point(572, 131);
+            associarContaPfBtn.Name = "associarContaPfBtn";
+            associarContaPfBtn.Size = new Size(107, 23);
+            associarContaPfBtn.TabIndex = 15;
+            associarContaPfBtn.Text = "Associar conta";
+            associarContaPfBtn.UseVisualStyleBackColor = false;
+            associarContaPfBtn.Click += associarContaPfBtn_Click;
             // 
             // label3
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Cambria", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label3.ForeColor = Color.Green;
-            label3.Location = new Point(251, 17);
+            label3.Location = new Point(220, 13);
             label3.Name = "label3";
-            label3.Size = new Size(277, 36);
+            label3.Size = new Size(220, 28);
             label3.TabIndex = 1;
             label3.Text = "LISTA DE CLIENTES";
             // 
-            // dataGridView1
+            // tabelaClientesPF
             // 
-            dataGridView1.BackgroundColor = Color.White;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(24, 136);
-            dataGridView1.Margin = new Padding(3, 4, 3, 4);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(623, 460);
-            dataGridView1.TabIndex = 0;
+            tabelaClientesPF.BackgroundColor = Color.White;
+            tabelaClientesPF.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            tabelaClientesPF.Location = new Point(21, 102);
+            tabelaClientesPF.Name = "tabelaClientesPF";
+            tabelaClientesPF.RowHeadersWidth = 51;
+            tabelaClientesPF.RowTemplate.Height = 25;
+            tabelaClientesPF.Size = new Size(545, 171);
+            tabelaClientesPF.TabIndex = 0;
             // 
             // CadastrarCliente
             // 
@@ -196,34 +250,31 @@
             CadastrarCliente.Controls.Add(groupBox3);
             CadastrarCliente.Controls.Add(documentoGB);
             CadastrarCliente.Controls.Add(groupBox1);
-            CadastrarCliente.Location = new Point(4, 29);
-            CadastrarCliente.Margin = new Padding(3, 4, 3, 4);
+            CadastrarCliente.Location = new Point(4, 24);
             CadastrarCliente.Name = "CadastrarCliente";
-            CadastrarCliente.Padding = new Padding(3, 4, 3, 4);
-            CadastrarCliente.Size = new Size(790, 644);
+            CadastrarCliente.Padding = new Padding(3);
+            CadastrarCliente.Size = new Size(690, 525);
             CadastrarCliente.TabIndex = 1;
             CadastrarCliente.Text = "Cadastrar Cliente";
             // 
             // groupBox5
             // 
-            groupBox5.Controls.Add(textBox2);
+            groupBox5.Controls.Add(numInstalacaoCadastramentoTxBox);
             groupBox5.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox5.Location = new Point(406, 320);
-            groupBox5.Margin = new Padding(3, 4, 3, 4);
+            groupBox5.Location = new Point(355, 240);
             groupBox5.Name = "groupBox5";
-            groupBox5.Padding = new Padding(3, 4, 3, 4);
-            groupBox5.Size = new Size(239, 96);
+            groupBox5.Size = new Size(209, 72);
             groupBox5.TabIndex = 16;
             groupBox5.TabStop = false;
             groupBox5.Text = "Número de registro";
             // 
-            // textBox2
+            // numInstalacaoCadastramentoTxBox
             // 
-            textBox2.Location = new Point(7, 37);
-            textBox2.Margin = new Padding(3, 4, 3, 4);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(188, 25);
-            textBox2.TabIndex = 0;
+            numInstalacaoCadastramentoTxBox.Location = new Point(6, 28);
+            numInstalacaoCadastramentoTxBox.MaxLength = 20;
+            numInstalacaoCadastramentoTxBox.Name = "numInstalacaoCadastramentoTxBox";
+            numInstalacaoCadastramentoTxBox.Size = new Size(165, 22);
+            numInstalacaoCadastramentoTxBox.TabIndex = 0;
             // 
             // cadastrarPessoaBtn
             // 
@@ -231,10 +282,9 @@
             cadastrarPessoaBtn.FlatStyle = FlatStyle.Popup;
             cadastrarPessoaBtn.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
             cadastrarPessoaBtn.ForeColor = SystemColors.ButtonHighlight;
-            cadastrarPessoaBtn.Location = new Point(341, 456);
-            cadastrarPessoaBtn.Margin = new Padding(3, 4, 3, 4);
+            cadastrarPessoaBtn.Location = new Point(298, 342);
             cadastrarPessoaBtn.Name = "cadastrarPessoaBtn";
-            cadastrarPessoaBtn.Size = new Size(122, 31);
+            cadastrarPessoaBtn.Size = new Size(107, 23);
             cadastrarPessoaBtn.TabIndex = 15;
             cadastrarPessoaBtn.Text = "CADASTRAR";
             cadastrarPessoaBtn.UseVisualStyleBackColor = false;
@@ -246,9 +296,9 @@
             label2.BackColor = Color.FromArgb(187, 218, 119);
             label2.Font = new Font("Cambria", 18F, FontStyle.Bold, GraphicsUnit.Point);
             label2.ForeColor = Color.Green;
-            label2.Location = new Point(265, 20);
+            label2.Location = new Point(232, 15);
             label2.Name = "label2";
-            label2.Size = new Size(267, 36);
+            label2.Size = new Size(214, 28);
             label2.TabIndex = 14;
             label2.Text = "CADASTRAMENTO";
             // 
@@ -256,22 +306,19 @@
             // 
             nomeRzSocialGB.Controls.Add(nomeRzSocialTxBox);
             nomeRzSocialGB.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            nomeRzSocialGB.Location = new Point(150, 297);
-            nomeRzSocialGB.Margin = new Padding(3, 4, 3, 4);
+            nomeRzSocialGB.Location = new Point(131, 223);
             nomeRzSocialGB.Name = "nomeRzSocialGB";
-            nomeRzSocialGB.Padding = new Padding(3, 4, 3, 4);
-            nomeRzSocialGB.Size = new Size(239, 104);
+            nomeRzSocialGB.Size = new Size(209, 78);
             nomeRzSocialGB.TabIndex = 11;
             nomeRzSocialGB.TabStop = false;
             nomeRzSocialGB.Text = "Nome/Razão Social";
             // 
             // nomeRzSocialTxBox
             // 
-            nomeRzSocialTxBox.Location = new Point(7, 43);
-            nomeRzSocialTxBox.Margin = new Padding(3, 4, 3, 4);
+            nomeRzSocialTxBox.Location = new Point(6, 32);
             nomeRzSocialTxBox.MaxLength = 80;
             nomeRzSocialTxBox.Name = "nomeRzSocialTxBox";
-            nomeRzSocialTxBox.Size = new Size(188, 25);
+            nomeRzSocialTxBox.Size = new Size(165, 22);
             nomeRzSocialTxBox.TabIndex = 0;
             // 
             // groupBox4
@@ -280,11 +327,9 @@
             groupBox4.Controls.Add(dddTelefoneTxBox);
             groupBox4.Controls.Add(telefoneTxBox);
             groupBox4.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox4.Location = new Point(406, 185);
-            groupBox4.Margin = new Padding(3, 4, 3, 4);
+            groupBox4.Location = new Point(355, 139);
             groupBox4.Name = "groupBox4";
-            groupBox4.Padding = new Padding(3, 4, 3, 4);
-            groupBox4.Size = new Size(239, 127);
+            groupBox4.Size = new Size(209, 95);
             groupBox4.TabIndex = 12;
             groupBox4.TabStop = false;
             groupBox4.Text = "Telefone";
@@ -292,82 +337,72 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(7, 40);
+            label1.Location = new Point(6, 30);
             label1.Name = "label1";
-            label1.Size = new Size(38, 17);
+            label1.Size = new Size(31, 14);
             label1.TabIndex = 2;
             label1.Text = "DDD";
             // 
             // dddTelefoneTxBox
             // 
-            dddTelefoneTxBox.Location = new Point(49, 36);
-            dddTelefoneTxBox.Margin = new Padding(3, 4, 3, 4);
+            dddTelefoneTxBox.Location = new Point(43, 27);
             dddTelefoneTxBox.MaxLength = 2;
             dddTelefoneTxBox.Name = "dddTelefoneTxBox";
-            dddTelefoneTxBox.Size = new Size(36, 25);
+            dddTelefoneTxBox.Size = new Size(32, 22);
             dddTelefoneTxBox.TabIndex = 1;
             // 
             // telefoneTxBox
             // 
-            telefoneTxBox.Location = new Point(7, 75);
-            telefoneTxBox.Margin = new Padding(3, 4, 3, 4);
+            telefoneTxBox.Location = new Point(6, 56);
             telefoneTxBox.MaxLength = 9;
             telefoneTxBox.Name = "telefoneTxBox";
-            telefoneTxBox.Size = new Size(188, 25);
+            telefoneTxBox.Size = new Size(165, 22);
             telefoneTxBox.TabIndex = 0;
             // 
             // groupBox3
             // 
             groupBox3.Controls.Add(emailTxBox);
             groupBox3.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox3.Location = new Point(150, 185);
-            groupBox3.Margin = new Padding(3, 4, 3, 4);
+            groupBox3.Location = new Point(131, 139);
             groupBox3.Name = "groupBox3";
-            groupBox3.Padding = new Padding(3, 4, 3, 4);
-            groupBox3.Size = new Size(239, 104);
+            groupBox3.Size = new Size(209, 78);
             groupBox3.TabIndex = 10;
             groupBox3.TabStop = false;
             groupBox3.Text = "Email";
             // 
             // emailTxBox
             // 
-            emailTxBox.Location = new Point(7, 43);
-            emailTxBox.Margin = new Padding(3, 4, 3, 4);
+            emailTxBox.Location = new Point(6, 32);
             emailTxBox.MaxLength = 50;
             emailTxBox.Name = "emailTxBox";
-            emailTxBox.Size = new Size(188, 25);
+            emailTxBox.Size = new Size(165, 22);
             emailTxBox.TabIndex = 0;
             // 
             // documentoGB
             // 
             documentoGB.Controls.Add(documentoTxBox);
             documentoGB.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            documentoGB.Location = new Point(406, 67);
-            documentoGB.Margin = new Padding(3, 4, 3, 4);
+            documentoGB.Location = new Point(355, 50);
             documentoGB.Name = "documentoGB";
-            documentoGB.Padding = new Padding(3, 4, 3, 4);
-            documentoGB.Size = new Size(239, 111);
+            documentoGB.Size = new Size(209, 83);
             documentoGB.TabIndex = 9;
             documentoGB.TabStop = false;
             documentoGB.Text = "Documento";
             // 
             // documentoTxBox
             // 
-            documentoTxBox.Location = new Point(7, 43);
-            documentoTxBox.Margin = new Padding(3, 4, 3, 4);
+            documentoTxBox.Location = new Point(6, 32);
             documentoTxBox.Name = "documentoTxBox";
-            documentoTxBox.Size = new Size(188, 25);
+            documentoTxBox.Size = new Size(165, 22);
             documentoTxBox.TabIndex = 0;
             // 
             // groupBox1
             // 
             groupBox1.Controls.Add(tipoPessoaOptions);
             groupBox1.Font = new Font("Cambria", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            groupBox1.Location = new Point(150, 67);
-            groupBox1.Margin = new Padding(3, 4, 3, 4);
+            groupBox1.Location = new Point(131, 50);
             groupBox1.Name = "groupBox1";
-            groupBox1.Padding = new Padding(3, 4, 3, 4);
-            groupBox1.Size = new Size(239, 111);
+            groupBox1.Size = new Size(209, 83);
             groupBox1.TabIndex = 8;
             groupBox1.TabStop = false;
             groupBox1.Text = "Tipo";
@@ -376,27 +411,26 @@
             // 
             tipoPessoaOptions.AllowDrop = true;
             tipoPessoaOptions.Items.AddRange(new object[] { "Pessoa Física", "Pessoa Jurídica" });
-            tipoPessoaOptions.Location = new Point(7, 41);
-            tipoPessoaOptions.Margin = new Padding(3, 4, 3, 4);
+            tipoPessoaOptions.Location = new Point(6, 31);
             tipoPessoaOptions.Name = "tipoPessoaOptions";
-            tipoPessoaOptions.Size = new Size(188, 25);
+            tipoPessoaOptions.Size = new Size(165, 22);
             tipoPessoaOptions.TabIndex = 0;
             tipoPessoaOptions.TabStop = false;
             tipoPessoaOptions.SelectedIndexChanged += tipoPessoaOptions_SelectedIndexChanged;
             // 
             // AdministradorMain
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(798, 677);
+            ClientSize = new Size(698, 553);
             Controls.Add(tabControl1);
-            Margin = new Padding(3, 4, 3, 4);
             Name = "AdministradorMain";
             Text = "AdministradorMain";
             tabControl1.ResumeLayout(false);
             Clientes.ResumeLayout(false);
             Clientes.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tabelaClientesPJ).EndInit();
+            ((System.ComponentModel.ISupportInitialize)tabelaClientesPF).EndInit();
             CadastrarCliente.ResumeLayout(false);
             CadastrarCliente.PerformLayout();
             groupBox5.ResumeLayout(false);
@@ -432,15 +466,20 @@
         private TextBox documentoTxBox;
         private GroupBox groupBox1;
         private ComboBox tipoPessoaOptions;
-        private DataGridView dataGridView1;
+        private DataGridView tabelaClientesPF;
         private GroupBox groupBox5;
-        private TextBox textBox2;
-        private Button button1;
+        private TextBox numInstalacaoCadastramentoTxBox;
+        private Button associarContaPfBtn;
         private Label label3;
         private Button button2;
-        private Button button4;
-        private Button button3;
-        private TextBox textBox1;
+        private Button associarContaPjBtn;
+        private Button pesquisarPjBtn;
+        private TextBox pesquisarPfTxBox;
         private FontDialog fontDialog1;
+        private TextBox associarContaPfTxBox;
+        private Button pesquisarPfBtn;
+        private TextBox pesquisarPjTxBox;
+        private DataGridView tabelaClientesPJ;
+        private TextBox associarContaPjTxBox;
     }
 }

@@ -10,9 +10,9 @@ namespace app.Presenters
 {
     public static class ValidacaoLoginCliente
     {
-        static PessoaFisicaModel pf = new PessoaFisicaModel();
+        public static PessoaFisicaModel pf = new PessoaFisicaModel();
         static PessoaFisicaRepository pfRepository = new PessoaFisicaRepository();
-        static PessoaJuridicaModel pj = new PessoaJuridicaModel();
+        public static PessoaJuridicaModel pj = new PessoaJuridicaModel();
         static PessoaJuridicaRepository pjRepository = new PessoaJuridicaRepository();
     
         public static bool PessoaFisicaExiste (string cpf)

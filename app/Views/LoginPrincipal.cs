@@ -52,6 +52,7 @@ namespace app.Views
                 pessoaFisica.CPF = documentoTxBox.Text;
                 if (ValidacaoLoginCliente.PessoaFisicaExiste(pessoaFisica.CPF))
                 {
+                    pessoaFisica = ValidacaoLoginCliente.pf;
                     var clienteForm = new ClienteMain(pessoaFisica);
                     clienteForm.Show();
                 } else
@@ -64,6 +65,7 @@ namespace app.Views
                 pessoaJuridica.CNPJ = documentoTxBox.Text;
                 if (ValidacaoLoginCliente.PessoaJuridicaExiste(pessoaJuridica.CNPJ))
                 {
+                    pessoaJuridica = ValidacaoLoginCliente.pj;
                     var clienteForm = new ClienteMain(pessoaJuridica);
                     clienteForm.Show();
                 } else
